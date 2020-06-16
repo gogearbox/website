@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -6,10 +7,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const features = [
-];
+const features = [];
 
-function Feature({imageUrl, title, description}) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames('col col--4', styles.feature)}>
@@ -24,15 +24,24 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
+Feature.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.isRequired,
+};
+
 function Home() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
   return (
-    <Layout
-      description={siteConfig.tagline}>
+    <Layout description={siteConfig.tagline}>
       <header className={classnames('', styles.heroBanner)}>
         <div className="container">
-          <img className={styles.featureImage} src='img/gearbox.png' alt='lgo' />
+          <img
+            className={styles.featureImage}
+            src="img/gearbox.png"
+            alt="lgo"
+          />
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
@@ -41,7 +50,8 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/')}>
+              to={useBaseUrl('docs/')}
+            >
               Get Started
             </Link>
           </div>
