@@ -9,7 +9,6 @@ module.exports = {
   projectName: 'website',
   themeConfig: {
     disableDarkMode: true,
-    defaultDarkMode: true,
     style: 'dark',
     navbar: {
       title: 'Gearbox',
