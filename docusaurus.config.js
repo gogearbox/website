@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Gearbox',
-  tagline: 'A web framework written in Go with a focus on high performance and memory optimization',
+  tagline:
+    'A web framework written in Go with a focus on high performance and memory optimization',
   url: 'https://gogearbox.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -46,8 +47,7 @@ module.exports = {
           homePageId: 'cloning-and-installing',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/gogearbox/website/edit/master/',
+          editUrl: 'https://github.com/gogearbox/website/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

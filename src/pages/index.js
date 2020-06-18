@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {
+  tomorrowNight,
+  github,
+} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styles from './styles.module.css';
 
-const features = [
-];
+const features = [];
 
-function Feature({imageUrl, title, description}) {
+const codeString = `package main
+
+import (
+	"github.com/gogearbox/gearbox"
+)
+
+func main() {
+	// Setup gearbox
+	gb := gearbox.New()
+
+	// Define your handlers
+	gb.Get("/hello", func(ctx *gearbox.Context) {
+		ctx.RequestCtx.Response.SetBodyString("Hello World!")
+	})
+
+	// Start service
+	gb.Start(":3000")
+}
+`;
+
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames('col col--4', styles.feature)}>
@@ -24,27 +49,67 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
+Feature.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.isRequired,
+};
+
 function Home() {
+  const [theme, setTheme] = useState(tomorrowNight);
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
+
+  const htmlElement = document.querySelector('html');
+
+  /**
+   * Since there is no direct way to listen on theme value
+   *
+   * We observe `html` tag attributes
+   */
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes') {
+        if (htmlElement.attributes['data-theme'].value === 'dark') {
+          setTheme(tomorrowNight);
+        } else {
+          setTheme(github);
+        }
+      }
+    });
+  });
+
+  observer.observe(htmlElement, {
+    attributes: true,
+  });
+
   return (
-    <Layout
-      description={siteConfig.tagline}>
+    <Layout description={siteConfig.tagline}>
       <header className={classnames('', styles.heroBanner)}>
-        <div className="container">
-          <img className={styles.featureImage} src='img/gearbox.png' alt='lgo' />
+        <div className={classnames('', styles.info)}>
+          <img
+            className={styles.featureImage}
+            src="img/gearbox.png"
+            alt="lgo"
+          />
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
+
+          <Link
+            className={classnames(
+              'button button--solid button--primary button--lg',
+              styles.getStarted,
+            )}
+            to={useBaseUrl('docs/')}
+          >
+            Get Started
+          </Link>
+        </div>
+
+        <div className={classnames('', styles.snippet)}>
+          <SyntaxHighlighter language="go" style={theme}>
+            {codeString}
+          </SyntaxHighlighter>
         </div>
       </header>
       <main>
