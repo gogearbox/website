@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SyntaxHighlighter from 'react-syntax-highlighter';
@@ -6,10 +6,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import {
-  tomorrowNight,
-  github,
-} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styles from './styles.module.css';
 
 const features = [];
@@ -56,32 +53,8 @@ Feature.propTypes = {
 };
 
 function Home() {
-  const [theme, setTheme] = useState(tomorrowNight);
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-
-  const htmlElement = document.querySelector('html');
-
-  /**
-   * Since there is no direct way to listen on theme value
-   *
-   * We observe `html` tag attributes
-   */
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.type === 'attributes') {
-        if (htmlElement.attributes['data-theme'].value === 'dark') {
-          setTheme(tomorrowNight);
-        } else {
-          setTheme(github);
-        }
-      }
-    });
-  });
-
-  observer.observe(htmlElement, {
-    attributes: true,
-  });
 
   return (
     <Layout description={siteConfig.tagline}>
@@ -107,7 +80,7 @@ function Home() {
         </div>
 
         <div className={classnames('', styles.snippet)}>
-          <SyntaxHighlighter language="go" style={theme}>
+          <SyntaxHighlighter language="go" style={github}>
             {codeString}
           </SyntaxHighlighter>
         </div>

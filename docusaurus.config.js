@@ -8,6 +8,7 @@ module.exports = {
   organizationName: 'gogearbox',
   projectName: 'website',
   themeConfig: {
+    disableDarkMode: true,
     navbar: {
       title: 'Gearbox',
       logo: {
