@@ -6,7 +6,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { tomorrowNight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styles from './styles.module.css';
 
 const features = [];
@@ -80,7 +80,7 @@ function Home() {
         </div>
 
         <div className={classnames('', styles.snippet)}>
-          <SyntaxHighlighter language="go" style={tomorrowNight}>
+          <SyntaxHighlighter language="go" style={github}>
             {codeString}
           </SyntaxHighlighter>
         </div>
