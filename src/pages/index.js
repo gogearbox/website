@@ -19,15 +19,15 @@ import (
 
 func main() {
 	// Setup gearbox
-	gb := gearbox.New()
+	g := gearbox.New()
 
 	// Define your handlers
-	gb.Get("/hello", func(ctx *gearbox.Context) {
+	g.Get("/", func(ctx *gearbox.Context) {
 		ctx.RequestCtx.Response.SetBodyString("Hello World!")
 	})
 
 	// Start service
-	gb.Start(":3000")
+	g.Start(":3000")
 }
 `;
 

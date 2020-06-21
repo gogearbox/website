@@ -9,6 +9,7 @@ module.exports = {
   projectName: 'website',
   themeConfig: {
     disableDarkMode: true,
+    sidebarCollapsible: false,
     navbar: {
       title: 'Gearbox',
       logo: {
@@ -45,7 +46,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'cloning-and-installing',
+          homePageId: 'getting-started',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/gogearbox/website/edit/master/',
