@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.56">
 <title data-react-helmet="true">Gearbox</title><meta data-react-helmet="true" property="og:title" content="Gearbox"><meta data-react-helmet="true" name="description" content="A web framework written in Go with a focus on high performance and memory optimization"><meta data-react-helmet="true" property="og:description" content="A web framework written in Go with a focus on high performance and memory optimization"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/styles.0792862b.css">
-<link rel="preload" href="/styles.dea47725.js" as="script">
-<link rel="preload" href="/runtime~main.4268621d.js" as="script">
-<link rel="preload" href="/main.54c287a9.js" as="script">
-<link rel="preload" href="/common.feb6ace3.js" as="script">
-<link rel="preload" href="/2.96648dab.js" as="script">
-<link rel="preload" href="/14.a91bce77.js" as="script">
-<link rel="preload" href="/c4f5d8e4.125fc512.js" as="script">
+<link rel="preload" href="/styles.518b28ef.js" as="script">
+<link rel="preload" href="/runtime~main.f8c3e3a4.js" as="script">
+<link rel="preload" href="/main.dc530843.js" as="script">
+<link rel="preload" href="/1.e4422567.js" as="script">
+<link rel="preload" href="/2.d06cd2b0.js" as="script">
+<link rel="preload" href="/17.b6fea812.js" as="script">
+<link rel="preload" href="/c4f5d8e4.1e9a2524.js" as="script">
 </head>
 <body>
 <div id="__docusaurus">
@@ -23,23 +23,23 @@
 
 <span class="hljs-function"><span style="color:#333;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span><span class="hljs-params">()</span></span> {
 	<span style="color:#998;font-style:italic">// Setup gearbox</span>
-	gb := gearbox.New()
+	g := gearbox.New()
 
 	<span style="color:#998;font-style:italic">// Define your handlers</span>
-	gb.Get(<span style="color:#d14">&quot;/hello&quot;</span>, <span class="hljs-function"><span style="color:#333;font-weight:bold">func</span><span class="hljs-params">(ctx *gearbox.Context)</span></span> {
+	g.Get(<span style="color:#d14">&quot;/&quot;</span>, <span class="hljs-function"><span style="color:#333;font-weight:bold">func</span><span class="hljs-params">(ctx *gearbox.Context)</span></span> {
 		ctx.RequestCtx.Response.SetBodyString(<span style="color:#d14">&quot;Hello World!&quot;</span>)
 	})
 
 	<span style="color:#998;font-style:italic">// Start service</span>
-	gb.Start(<span style="color:#d14">&quot;:3000&quot;</span>)
+	g.Start(<span style="color:#d14">&quot;:3000&quot;</span>)
 }
 </code></pre></div></header><main></main></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2020 Gearbox Contributors</div></div></div></footer></div>
-<script src="/styles.dea47725.js"></script>
-<script src="/runtime~main.4268621d.js"></script>
-<script src="/main.54c287a9.js"></script>
-<script src="/common.feb6ace3.js"></script>
-<script src="/2.96648dab.js"></script>
-<script src="/14.a91bce77.js"></script>
-<script src="/c4f5d8e4.125fc512.js"></script>
+<script src="/styles.518b28ef.js"></script>
+<script src="/runtime~main.f8c3e3a4.js"></script>
+<script src="/main.dc530843.js"></script>
+<script src="/1.e4422567.js"></script>
+<script src="/2.d06cd2b0.js"></script>
+<script src="/17.b6fea812.js"></script>
+<script src="/c4f5d8e4.1e9a2524.js"></script>
 </body>
 </html>
