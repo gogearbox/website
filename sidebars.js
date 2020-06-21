@@ -1,7 +1,8 @@
 module.exports = {
-  someSidebar: {
-    'Getting Started': ['cloning-and-installing'],
-    Community: ['github-workflow', 'contributing', 'roadmap'],
+  docs: {
+    'Gearbox': ['getting-started'],
+    'API': ['gearbox', 'context'],
+    Community: ['cloning-and-installing', 'github-workflow', 'contributing', 'roadmap'],
     Internals: ['routing-architecture'],
   },
 };
