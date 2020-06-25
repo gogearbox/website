@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    timezone: Africa/Cairo
+  target-branch: master
+  reviewers:
+  - abahmed
+  - muhammednagy
+  - muhammadtarek
+  versioning-strategy: increase
