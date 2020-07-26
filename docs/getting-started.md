@@ -4,7 +4,7 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-**Gearbox** :gear: is a web framework for building micro services written in Go with a focus on high performance and memory optimization and it's built on fasthttp which is up to 10x faster than net/http.
+**Gearbox** :gear: is a web framework for building micro services written in Go with a focus on high performance. It's built on fasthttp which is up to 10x faster than net/http.
 
 ### Installation
 
@@ -32,8 +32,8 @@ func main() {
 	g := gearbox.New()
 
 	// Define your handlers
-	g.Get("/", func(ctx *gearbox.Context) {
-		ctx.RequestCtx.Response.SetBodyString("Hello World!")
+	g.Get("/", func(ctx gearbox.Context) {
+		ctx.SendString("Hello World!")
 	})
 
 	// Start service

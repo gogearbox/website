@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Gearbox',
   tagline:
-    'A web framework written in Go with a focus on high performance and memory optimization',
+    'A web framework written in Go with a focus on high performance',
   url: 'https://gogearbox.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',

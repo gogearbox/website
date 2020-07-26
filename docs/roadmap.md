@@ -18,11 +18,11 @@ sidebar_label: Roadmap
 | Caching                           	|      Done      	|
 
 
-### October, 2020
+### July 2020 (v1.1.0)
 
-(**Not finished TBD Later**)
 
 |          **Feature / Task**         	| **Current Status** 	|
 |:------------------------------------:	|:--------------------:	|
-| Routing: Support static routes        |               	|
+| Improve router                        |        Done         	|
+| Routing: Support static routes        |        Done         	|
 

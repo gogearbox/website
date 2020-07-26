@@ -18,6 +18,10 @@
   padding-right: 0.1rem;
 }
 
+.snippet {
+  min-width: 450px;
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
