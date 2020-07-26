@@ -22,8 +22,8 @@ func main() {
 	g := gearbox.New()
 
 	// Define your handlers
-	g.Get("/", func(ctx *gearbox.Context) {
-		ctx.RequestCtx.Response.SetBodyString("Hello World!")
+	g.Get("/", func(ctx gearbox.Context) {
+		ctx.SendString("Hello World!")
 	})
 
 	// Start service

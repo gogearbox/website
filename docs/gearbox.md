@@ -39,7 +39,10 @@ func main() {
 | Property | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
 | ServerName | `string` | Enables the `Server` HTTP header with the given value | `""` |
-| CaseSensitive | `bool` | When enabled, `/Foo` and `/foo` are different routes. When disabled, `/Foo`and `/foo` are treated the same | `false` |
+| CaseInSensitive | `bool` | When disabled, `/Foo` and `/foo` are different routes. When enabled, `/Foo`and `/foo` are treated the same | `false` |
+| HandleMethodNotAllowed | `bool` | Enables answering with HTTP status code 405 if request does not match with any route, but there are another methods are allowed for that route otherwise answer with Not Found handlers or status code 404. | `false` |
+| HandleOPTIONS | `bool` | Enables automatic replies to OPTIONS requests if there are no handlers registered for that route | `false` |
+| AutoRecover | `bool` | Enables automatic recovering from panic while executing handlers by answering with HTTP status code 500 and logging error message without stopping service | `false` |
 | MaxRequestBodySize | `int` | Sets the maximum allowed size for a request body, if the size exceeds the configured limit, it sends `413 - Request Entity Too Large` response | `4 * 1024 * 1024` |
 | Concurrency | `int` | Maximum number of concurrent connections | `256 * 1024` |
 | CacheSize | `int` | Maximum size of LRU cache if it's enabled | `1000` |
@@ -123,19 +126,12 @@ The `PATCH` method is used to apply partial modifications to a resource
 Patch(path string, handlers ...handlerFunc) *Route
 ```
 
-#### Method
-The `METHOD` method is used to define your own HTTP Method
-
-```go
-Method(method, path string, handlers ...handlerFunc) *Route
-```
-
-### Fallback
+### Not Found
 
 A default handlers that will be called if there is no matches for requested route
 
 ```go
-Fallback(handlers ...handlerFunc) error
+NotFound(handlers ...handlerFunc)
 ```
 
 
@@ -147,6 +143,21 @@ Applies middlware(s) to be called in order they were defined before calling hand
 Use(middlewares ...handlerFunc)
 ```
 
+### Static
+
+Serves static file(s) in root directory uder specific prefix
+
+```go
+Static(prefix, root string)
+```
+
+**For Example**
+```go
+// Serve files in assets directory for prefix static
+// requests will be like 
+// http://localhost:3000/static/gearbox.png
+gb.Static("/static", "./assets")
+```
 
 ### Group
 
@@ -159,8 +170,8 @@ Group(prefix string, routes []*Route) []*Route
 **For Example**
 ```go
 gb.Group("/account",  []*gearbox.Route{
-	gb.Get("/id", func(ctx *gearbox.Context) {
-		ctx.RequestCtx.Response.SetBodyString("User X")
+	gb.Get("/id", func(ctx gearbox.Context) {
+		ctx.SendString("User X")
 	})
 })
 ```
