@@ -1,3 +1,6 @@
+const theme = require('prism-react-renderer/themes/github');
+const darkTheme = require('prism-react-renderer/themes/vsDark');
+
 module.exports = {
   title: 'Gearbox',
   tagline: 'A web framework written in Go with a focus on high performance',
@@ -7,8 +10,12 @@ module.exports = {
   organizationName: 'gogearbox',
   projectName: 'website',
   themeConfig: {
-    colorMode: { disableSwitch: true },
     sidebarCollapsible: false,
+    prism: {
+      theme,
+      darkTheme,
+      defaultLanguage: 'go',
+    },
     navbar: {
       title: 'Gearbox',
       logo: {
