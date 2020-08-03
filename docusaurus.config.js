@@ -15,6 +15,7 @@ module.exports = {
       theme,
       darkTheme,
       defaultLanguage: 'go',
+      additionalLanguages: ['powershell'],
     },
     navbar: {
       title: 'Gearbox',

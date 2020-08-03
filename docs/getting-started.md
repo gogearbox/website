@@ -12,7 +12,7 @@ sidebar_label: Getting Started
 
 Just use [go get](https://golang.org/cmd/go/#hdr-Add_dependencies_to_current_module_and_install_them) to download and install gearbox
 
-```bash
+``` go
 go get -u github.com/gogearbox/gearbox
 ```
 
@@ -43,8 +43,8 @@ func main() {
 
 Start your service
 
-```bash
+``` go
 go run service.go
 ```
 
-Visit `http://localhost:3000` to your Gearbox serivce in action! 
+Visit `http://localhost:3000` to your Gearbox serivce in action!

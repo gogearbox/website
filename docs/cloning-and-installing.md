@@ -14,13 +14,13 @@ You need to have the following tools installed on your computer
 
 #### Debian based distributions (Debian / Ubuntu / Linux Mint / elementary OS)
 In your terminal
-``` bash
+``` sh
 sudo apt-get install -y golang-go build-essential git
 ```
 
 #### Enterprise based distributions (Red Hat® / CentOS / CloudLinux / Fedora)
 In your terminal
-``` bash
+``` sh
 sudo yum install -y golang git
 ```
 ### Windows
@@ -37,14 +37,14 @@ sudo yum install -y golang git
 
 ### Mac OS X
 In your terminal
-``` bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+``` sh
+/bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install git
 brew install go
 ```
 ### Getting the source
 In your terminal
-``` bash
+``` sh
 # Clone Gearbox's repository
 git clone https://github.com/gogearbox/gearbox
 ```
