@@ -1,14 +1,13 @@
 module.exports = {
   title: 'Gearbox',
-  tagline:
-    'A web framework written in Go with a focus on high performance',
+  tagline: 'A web framework written in Go with a focus on high performance',
   url: 'https://gogearbox.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'gogearbox',
   projectName: 'website',
   themeConfig: {
-    disableDarkMode: true,
+    colorMode: { disableSwitch: true },
     sidebarCollapsible: false,
     navbar: {
       title: 'Gearbox',
@@ -16,7 +15,7 @@ module.exports = {
         alt: 'gearbox logo',
         src: 'img/gearbox.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/',
           activeBasePath: 'docs',
