@@ -1,0 +1,49 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+
+    - name: Pull everything
+      run: |
+        git fetch --all
+        git pull --unshallow
+        git fetch --tags
+    - name: Install Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+
+    - name: Set package info in env
+      run: |
+        echo ::set-env name=REPO_URL::$(node -p -e "require('./package.json').version")
+        echo ::set-env name=PACKAGE_NAME::$(node -p -e "require('./package.json').name")
+    - name: Cache node_modules
+      uses: actions/cache@v1.0.0
+      with:
+        path: node_modules
+        key: trella-website-${{ hashFiles('yarn.lock') }}
+
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Install deps
+      run: yarn install
+
+    - name: Build app
+      run: yarn build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          personal_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
