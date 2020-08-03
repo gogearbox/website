@@ -13,10 +13,10 @@
     "@docusaurus/core": "^2.0.0-alpha.60",
     "@docusaurus/preset-classic": "^2.0.0-alpha.59",
     "classnames": "^2.2.6",
+    "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-syntax-highlighter": "^13.0.0"
+    "react-dom": "^16.8.4"
   },
   "browserslist": {
     "production": [
