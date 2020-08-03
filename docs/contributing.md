@@ -4,7 +4,7 @@ title: Contributing
 sidebar_label: Contributing
 ---
 **Newcomers** are always welcome to contribute to gearbox, and we are happy to offer help to newcomers.
-Before making changes, please first discuss the change you want to make through [Discord](https://discord.com/invite/CT8my4R), or email us at [gearbox@googlegroups.com](gearbox@googlegroups.com)
+Before making changes, please first discuss the change you want to make through [Discord](https://discord.com/invite/CT8my4R), or email us at [gearbox@googlegroups.com](mailto:gearbox@googlegroups.com)
 ### There are many ways to contribute:
 
 + [Suggest new features to be implemented](https://github.com/gogearbox/gearbox/issues)
@@ -18,9 +18,9 @@ Before making changes, please first discuss the change you want to make through 
 If you wish to work on an issue, please comment on the issue that you want to work on it. This is to prevent duplicated efforts on the same issue.
 
 
-Contributions to gearbox ⚙️ should be made in the form of **pull requests** (PR) to the **master** branch. 
+Contributions to gearbox ⚙️ should be made in the form of **pull requests** (PR) to the **master** branch.
 
-Each pull request will be **reviewed by someone with permission to land patches**. 
+Each pull request will be **reviewed by someone with permission to land patches**.
 
 After reviewing the patch, it could be merged to the **master** branch or given feedback for changes. (Seems not clear to you! Don't worry, we have added tutorials for [Github Workflow](./GitHub-workflow)
 
