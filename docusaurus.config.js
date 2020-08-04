@@ -11,10 +11,14 @@ module.exports = {
   projectName: 'website',
   themeConfig: {
     sidebarCollapsible: false,
+    colorMode: {
+      defaultMode: "dark"
+    },
     prism: {
       theme,
       darkTheme,
       defaultLanguage: 'go',
+      additionalLanguages: ['powershell'],
     },
     navbar: {
       title: 'Gearbox',
