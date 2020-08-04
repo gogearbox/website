@@ -40,9 +40,27 @@ gb.Get("/users/:user", func(ctx gearbox.Context) {
 })
 ```
 
+
+### SendBytes
+
+Sets the body of response for bytes type
+
+```go
+SendBytes(value []byte) Context
+```
+
+**Example**
+
+```go
+gb.Get("/hello", func(ctx gearbox.Context) {
+	ctx.SendBytes([]byte("Hello World!"))
+})
+```
+
+
 ### SendString
 
-Sets the body of response as with specified string
+Sets the body of response for string type
 
 ```go
 SendString(value string) Context
@@ -53,6 +71,28 @@ SendString(value string) Context
 ```go
 gb.Get("/hello", func(ctx gearbox.Context) {
 	ctx.SendString("Hello World!")
+})
+```
+
+
+### SendJSON
+
+Sets the body of response for any interface after converting any interface to json and sets content type header to application/json
+
+```go
+SendJSON(in interface{}) error
+```
+
+**Example**
+
+```go
+type Response struct {
+	Value string
+}
+
+gb.Get("/hello", func(ctx gearbox.Context) {
+	var r Response
+	ctx.SendJSON(&r)
 })
 ```
 
@@ -139,6 +179,30 @@ Body() string
 ```go
 gb.Get("/hello", func(ctx gearbox.Context) {
 	requestBody := ctx.Body()
+	// ...
+})
+```
+
+
+### ParseBody
+
+Parses request body into provided struct. Currently, Supports decoding theses types: application/json.
+
+```go
+ParseBody(out interface{}) error
+```
+
+**Example**
+
+```go
+type Request struct {
+	Value string
+}
+
+gb.Get("/hello", func(ctx gearbox.Context) {
+	var req Request
+	ctx.ParseBody(&req)
+
 	// ...
 })
 ```
