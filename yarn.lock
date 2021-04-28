@@ -940,35 +940,16 @@
     "@babel/helper-validator-option" "^7.12.17"
     "@babel/plugin-transform-typescript" "^7.13.0"
 
-"@babel/runtime-corejs3@^7.10.2":
-  version "7.12.1"
-  resolved "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.12.1.tgz"
-  dependencies:
-    core-js-pure "^3.0.0"
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime-corejs3@^7.12.13":
+"@babel/runtime-corejs3@^7.10.2", "@babel/runtime-corejs3@^7.12.13":
   version "7.13.10"
   resolved "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.13.10.tgz"
   dependencies:
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
-  version "7.10.2"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.10.2.tgz"
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.3", "@babel/runtime@^7.12.5":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
   version "7.13.10"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.13.10.tgz"
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.11.2":
-  version "7.12.1"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.1.tgz"
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1021,7 +1002,7 @@
     "@docsearch/css" "3.0.0-alpha.34"
     algoliasearch "^4.0.0"
 
-"@docusaurus/core@2.0.0-alpha.73", "@docusaurus/core@^2.0.0-alpha.71":
+"@docusaurus/core@2.0.0-alpha.73":
   version "2.0.0-alpha.73"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-alpha.73.tgz#b00a4b3bee82bbe42535f5035d1f5767c1647207"
   dependencies:
@@ -1104,9 +1085,100 @@
     webpack-merge "^4.2.2"
     webpackbar "^5.0.0-3"
 
+"@docusaurus/core@^2.0.0-alpha.74":
+  version "2.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.0.0-alpha.74.tgz#8df816c27fca5c11ae6f0eb3e31cd9802646b564"
+  dependencies:
+    "@babel/core" "^7.12.16"
+    "@babel/generator" "^7.12.15"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.12.13"
+    "@babel/plugin-proposal-optional-chaining" "^7.12.16"
+    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
+    "@babel/plugin-transform-runtime" "^7.12.15"
+    "@babel/preset-env" "^7.12.16"
+    "@babel/preset-react" "^7.12.13"
+    "@babel/preset-typescript" "^7.12.16"
+    "@babel/runtime" "^7.12.5"
+    "@babel/runtime-corejs3" "^7.12.13"
+    "@babel/traverse" "^7.12.13"
+    "@docusaurus/cssnano-preset" "2.0.0-alpha.74"
+    "@docusaurus/react-loadable" "5.5.0"
+    "@docusaurus/types" "2.0.0-alpha.74"
+    "@docusaurus/utils" "2.0.0-alpha.74"
+    "@docusaurus/utils-validation" "2.0.0-alpha.74"
+    "@endiliey/static-site-generator-webpack-plugin" "^4.0.0"
+    "@svgr/webpack" "^5.5.0"
+    autoprefixer "^10.2.5"
+    babel-loader "^8.2.2"
+    babel-plugin-dynamic-import-node "2.3.0"
+    boxen "^5.0.0"
+    cache-loader "^4.1.0"
+    chalk "^4.1.0"
+    chokidar "^3.5.1"
+    clean-css "^5.1.1"
+    commander "^5.1.0"
+    copy-webpack-plugin "^6.4.1"
+    core-js "^3.9.1"
+    css-loader "^5.1.1"
+    del "^6.0.0"
+    detect-port "^1.3.0"
+    eta "^1.12.1"
+    express "^4.17.1"
+    file-loader "^6.2.0"
+    fs-extra "^9.1.0"
+    github-slugger "^1.3.0"
+    globby "^11.0.2"
+    html-minifier-terser "^5.1.1"
+    html-tags "^3.1.0"
+    html-webpack-plugin "^4.5.0"
+    import-fresh "^3.3.0"
+    is-root "^2.1.0"
+    leven "^3.1.0"
+    lodash "^4.17.20"
+    mini-css-extract-plugin "^0.8.0"
+    module-alias "^2.2.2"
+    nprogress "^0.2.0"
+    null-loader "^4.0.0"
+    optimize-css-assets-webpack-plugin "^5.0.4"
+    pnp-webpack-plugin "^1.6.4"
+    postcss "^8.2.7"
+    postcss-loader "^4.1.0"
+    prompts "^2.4.0"
+    react-dev-utils "^11.0.1"
+    react-helmet "^6.1.0"
+    react-loadable "^5.5.0"
+    react-loadable-ssr-addon "^0.3.0"
+    react-router "^5.2.0"
+    react-router-config "^5.1.1"
+    react-router-dom "^5.2.0"
+    resolve-pathname "^3.0.0"
+    rtl-detect "^1.0.2"
+    semver "^7.3.4"
+    serve-handler "^6.1.3"
+    shelljs "^0.8.4"
+    std-env "^2.2.1"
+    terser-webpack-plugin "^4.1.0"
+    tslib "^2.1.0"
+    update-notifier "^5.1.0"
+    url-loader "^4.1.1"
+    wait-on "^5.2.1"
+    webpack "^4.44.1"
+    webpack-bundle-analyzer "^4.4.0"
+    webpack-dev-server "^3.11.2"
+    webpack-merge "^4.2.2"
+    webpackbar "^5.0.0-3"
+
 "@docusaurus/cssnano-preset@2.0.0-alpha.73":
   version "2.0.0-alpha.73"
   resolved "https://registry.yarnpkg.com/@docusaurus/cssnano-preset/-/cssnano-preset-2.0.0-alpha.73.tgz#af3275376836c6f128efeae8bf7c69c60620098a"
+  dependencies:
+    cssnano-preset-advanced "^4.0.7"
+    postcss "^7.0.2"
+    postcss-sort-media-queries "^1.7.26"
+
+"@docusaurus/cssnano-preset@2.0.0-alpha.74":
+  version "2.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@docusaurus/cssnano-preset/-/cssnano-preset-2.0.0-alpha.74.tgz#e666fa042c9c5fbbc68cc7b9d57395f86ba72382"
   dependencies:
     cssnano-preset-advanced "^4.0.7"
     postcss "^7.0.2"
@@ -1316,6 +1388,16 @@
     querystring "0.2.0"
     webpack-merge "^4.2.2"
 
+"@docusaurus/types@2.0.0-alpha.74":
+  version "2.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.0.0-alpha.74.tgz#43f3fdf61ace34de527775d9238d5a449cc6f8ff"
+  dependencies:
+    "@types/webpack" "^4.41.0"
+    commander "^5.1.0"
+    joi "^17.4.0"
+    querystring "0.2.0"
+    webpack-merge "^4.2.2"
+
 "@docusaurus/utils-validation@2.0.0-alpha.73":
   version "2.0.0-alpha.73"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils-validation/-/utils-validation-2.0.0-alpha.73.tgz#d18708a681361ecd08f1628538358146a893c521"
@@ -1325,11 +1407,34 @@
     joi "^17.4.0"
     tslib "^2.1.0"
 
+"@docusaurus/utils-validation@2.0.0-alpha.74":
+  version "2.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@docusaurus/utils-validation/-/utils-validation-2.0.0-alpha.74.tgz#212325ba639c96a2ef862ebfcbb60669972e2caf"
+  dependencies:
+    "@docusaurus/utils" "2.0.0-alpha.74"
+    chalk "^4.1.0"
+    joi "^17.4.0"
+    tslib "^2.1.0"
+
 "@docusaurus/utils@2.0.0-alpha.73":
   version "2.0.0-alpha.73"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-alpha.73.tgz#eeca700e888e41961c9d06febed2256064e859e4"
   dependencies:
     "@docusaurus/types" "2.0.0-alpha.73"
+    "@types/github-slugger" "^1.3.0"
+    chalk "^4.1.0"
+    escape-string-regexp "^4.0.0"
+    fs-extra "^9.1.0"
+    gray-matter "^4.0.2"
+    lodash "^4.17.20"
+    resolve-pathname "^3.0.0"
+    tslib "^2.1.0"
+
+"@docusaurus/utils@2.0.0-alpha.74":
+  version "2.0.0-alpha.74"
+  resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-alpha.74.tgz#45ec29cd4bed0ee63a81fa1a6ac81df0573e6ff6"
+  dependencies:
+    "@docusaurus/types" "2.0.0-alpha.74"
     "@types/github-slugger" "^1.3.0"
     chalk "^4.1.0"
     escape-string-regexp "^4.0.0"
@@ -2656,21 +2761,7 @@ chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.4.1.tgz"
-  dependencies:
-    anymatch "~3.1.1"
-    braces "~3.0.2"
-    glob-parent "~5.1.0"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.4.0"
-  optionalDependencies:
-    fsevents "~2.1.2"
-
-chokidar@^3.5.1:
+chokidar@^3.4.1, chokidar@^3.5.1:
   version "3.5.1"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.1.tgz"
   dependencies:
@@ -4358,10 +4449,6 @@ fsevents@^1.2.7:
   dependencies:
     bindings "^1.5.0"
     nan "^2.12.1"
-
-fsevents@~2.1.2:
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.1.3.tgz"
 
 fsevents@~2.3.1:
   version "2.3.2"
@@ -7489,12 +7576,6 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-readdirp@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/readdirp/-/readdirp-3.4.0.tgz"
-  dependencies:
-    picomatch "^2.2.1"
-
 readdirp@~3.5.0:
   version "3.5.0"
   resolved "https://registry.npmjs.org/readdirp/-/readdirp-3.5.0.tgz"
@@ -8694,11 +8775,7 @@ tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.13.0.tgz"
 
-tslib@^2.0.3:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.1.0.tgz"
-
-tslib@^2.1.0:
+tslib@^2.0.3, tslib@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
 
