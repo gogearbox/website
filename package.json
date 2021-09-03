@@ -10,7 +10,7 @@
     "eslint": "eslint"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.5",
+    "@docusaurus/core": "^2.0.0-beta.6",
     "@docusaurus/preset-classic": "^2.0.0-beta.5",
     "caniuse-lite": "^1.0.30001252",
     "classnames": "^2.3.1",
