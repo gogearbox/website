@@ -10,9 +10,9 @@
     "eslint": "eslint"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.9",
+    "@docusaurus/core": "^2.0.0-beta.14",
     "@docusaurus/preset-classic": "^2.0.0-beta.13",
-    "caniuse-lite": "^1.0.30001291",
+    "caniuse-lite": "^1.0.30001292",
     "classnames": "^2.3.1",
     "prism-react-renderer": "^1.2.1",
     "prop-types": "^15.7.2",
