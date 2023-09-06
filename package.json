@@ -12,7 +12,7 @@
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.14",
     "@docusaurus/preset-classic": "^2.0.0-beta.17",
-    "caniuse-lite": "^1.0.30001312",
+    "caniuse-lite": "^1.0.30001527",
     "classnames": "^2.3.1",
     "prism-react-renderer": "^1.3.1",
     "prop-types": "^15.8.1",
